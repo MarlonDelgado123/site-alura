@@ -1,0 +1,169 @@
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #C0C0C0;
+    --verde-john-deere: #4A7729;
+    --amarelo-john-deere: #F7E300;
+    --cor-de-fundo: #F4F4F4;
+    --fonte-principal: 'Inter';
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/foto10.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container__caixa {
+    max-width: 800px;
+    padding: 2em;
+}
+
+.container__titulo {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.container__imagem {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+
+.container__botao {
+    background-color: var(--verde-john-deere);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--amarelo-john-deere);
+    display: block;
+    text-decoration: none;
+    margin: 0.5em auto;
+    max-width: 300px;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--verde-john-deere);
+    color: var(--verde-john-deere);
+}
+
+.produtos {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.produtos__titulo {
+    font-size: 36px;
+    color: var(--verde-john-deere);
+    margin-bottom: 1em;
+}
+
+.produtos__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.produto {
+    cursor: pointer;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--verde-john-deere);
+    border-radius: 5px;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal__imagem {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.modal__fechar {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 2em;
+    color: var(--amarelo-john-deere);
+    cursor: pointer;
+}
+
+.rodape {
+    text-align: center;
+    margin: 2em 1em;
+    background-color: var(--verde-john-deere);
+    color: var(--amarelo-john-deere);
+    padding: 2em 0;
+}
+
+.rodape__logo {
+    width: 150px;
+    margin-bottom: 1em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}

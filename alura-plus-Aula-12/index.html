@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenda de Tratores John Deere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="principal container">
+        <div class="container__caixa">
+            <h1 class="container__titulo">Encontre os Melhores Tratores John Deere</h1>
+            <img src="img/tratorcapa.avif" alt="Tratores John Deere" class="container__imagem">
+            <a href="#produtos" class="container__botao">Veja Nossos Tratores</a>
+            <a href="#contato" class="container__botao botao_secundario">Entre em Contato</a>
+        </div>
+    </section>
+
+    <section id="produtos" class="produtos container">
+        <h2 class="produtos__titulo">Tratores em Destaque</h2>
+        <div class="produtos__grid">
+            <div class="produto" onclick="abrirModal('img/Trator1.png')">
+                <img src="img/foto4.jpeg" alt="Trator 1">
+                <p>Trator Modelo X</p>
+            </div>
+            <div class="produto" onclick="abrirModal('img/Trator2.png')">
+                <img src="img/foto5.jpeg" alt="Trator 2">
+                <p>Trator Modelo Y</p>
+            </div>
+            <div class="produto" onclick="abrirModal('img/Trator3.png')">
+                <img src="img/foto6.jpeg" alt="Trator 3">
+                <p>Trator Modelo Z</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <span class="modal__fechar" onclick="fecharModal()">&times;</span>
+        <img id="modal__imagem" class="modal__imagem" src="" alt="Imagem do Trator">
+    </div>
+
+    <footer class="rodape">
+        <img src="img/foto8.png" alt="John Deere" class="rodape__logo">
+        <ul class="rodape__lista">
+            <li class="lista__link"><a href="#">Idioma</a></li>
+            <li class="lista__link"><a href="#">Dispositivos compatíveis</a></li>
+            <li class="lista__link"><a href="#">Contrato de financiamentos</a></li>
+            <li class="lista__link"><a href="#">Política de privacidade</a></li>
+            <li class="lista__link"><a href="#">Proteção de dados no Brasil</a></li>
+            <li class="lista__link"><a href="#">Anúncios personalizados</a></li>
+            <li class="lista__link"><a href="#">Ajuda</a></li>
+        </ul>
+        <p class="rodape__texto">® 2024 John Deere. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function abrirModal(src) {
+            document.getElementById('modal').style.display = 'flex';
+            document.getElementById('modal__imagem').src = src;
+        }
+
+        function fecharModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
